@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Mail encriptado",
+  "description": "Extensión para encriptar un correo antes de ser enviado",
+  "version": "1.0",
+  
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["jquery/jquery-2.1.4.min.js","inject.js",
+              "cryptico/jsbn.js",
+              "cryptico/random.js",
+              "cryptico/hash.js",
+              "cryptico/rsa.js",
+              "cryptico/aes.js",
+              "cryptico/api.js"],
+      "css": ["inject.css"]
+    }
+  ]
+
+}
